@@ -16,12 +16,17 @@ function setLocalStorage(){
     localStorage.setItem(nameKey, name);
     localStorage.setItem(todoKey, JSON.stringify(toDoLists));
 }
+function drawName(){
+    nameForm.remove();
+    helloName.innerHTML=`<h2>Welcome! ${name}</h2>`;
+}
 
 function handleNameSubmit(e){
     e.preventDefault();
     const text = e.target.querySelector("input").value;
     name = text;
     setLocalStorage();
+    drawName();
 }
 
 function deleteToDo(event) {
@@ -73,9 +78,7 @@ function init(){
     if(name===null){
         nameForm.addEventListener("submit", handleNameSubmit);
     } else{
-        nameForm.remove();
-        helloName.innerHTML=`<h2>Welcome! ${name}</h2>`;
-
+        drawName();
     }
     todoForm.addEventListener("submit", handleToDoSubmit);
     toDoLists.forEach((toDo)=>{
