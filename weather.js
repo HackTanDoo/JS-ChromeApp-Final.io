@@ -44,6 +44,7 @@ function loadCoords(){
     if(loadedCoords === null){
         askForCoords();
         console.log("ASKING COORDS");
+        const loadedCoords = JSON.parse(localStorage.getItem(COORDS));
     }
     getWeather(loadedCoords.latitude,loadedCoords.longitude);
 }
