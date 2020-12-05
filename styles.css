@@ -43,6 +43,11 @@ input {
   color: snow;
 }
 
+input::placeholder {
+  color: snow;
+  font-style: italic;
+}
+
 input:focus {
   outline: none;
   color: snow;
