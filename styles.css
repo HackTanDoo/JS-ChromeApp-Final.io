@@ -1,0 +1,88 @@
+@import "reset.css";
+
+body {
+  font-family: "Nerko One", cursive;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-family: "Nerko One", cursive;
+  font-size: 100px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: white;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 400;
+  color: snow;
+  margin-bottom: 30px;
+}
+
+.weather {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  color: snow;
+}
+
+input {
+  font-family: "Nerko One", cursive;
+  border: none;
+  border-bottom: 3px solid snow;
+  background-color: transparent;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: snow;
+}
+
+input:focus {
+  outline: none;
+  color: snow;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+ul {
+  list-style-type: none;
+  width: 300px;
+}
+li {
+  margin: 10px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: white;
+  font-family: "Nerko One", cursive;
+}
